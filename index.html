@@ -1,108 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌙 Сура Аль-Мульк — Выберите версию</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Сура Аль-Мульк — выберите версию</title>
 <style>
-  :root {
-    --navy: #0d1b3e;
-    --gold: #c9a84c;
-    --gold-light: #e8c96b;
-    --cream: #faf6ed;
-    --green: #2d6a4f;
-    --green-light: #52b788;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    background: var(--navy);
-    min-height: 100vh;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  .icon { font-size: 4rem; animation: float 3s ease-in-out infinite; display: block; margin-bottom: 1rem; }
-  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-  h1 { color: var(--gold-light); font-size: clamp(1.6rem, 5vw, 2.8rem); margin-bottom: 0.5rem; }
-  .subtitle { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 3rem; font-style: italic; }
-
-  .cards { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; max-width: 680px; }
-
-  .card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,168,76,0.3);
-    border-radius: 20px;
-    padding: 2rem 1.8rem;
-    width: 280px;
-    text-decoration: none;
-    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-    position: relative;
-    overflow: hidden;
-  }
-  .card::before {
-    content: "";
-    position: absolute; inset: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(201,168,76,0.08), transparent 70%);
-    pointer-events: none;
-  }
-  .card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 40px rgba(201,168,76,0.15); }
-  .card.manus { border-color: rgba(82,183,136,0.3); }
-  .card.manus::before { background: radial-gradient(circle at 50% 0%, rgba(82,183,136,0.08), transparent 70%); }
-  .card.manus:hover { border-color: var(--green-light); box-shadow: 0 12px 40px rgba(82,183,136,0.15); }
-
-  .card-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-  .card-tag {
-    display: inline-block;
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-    padding: 0.2rem 0.7rem; border-radius: 20px;
-    margin-bottom: 0.8rem;
-    background: rgba(201,168,76,0.18); color: var(--gold-light);
-    text-transform: uppercase;
-  }
-  .card.manus .card-tag { background: rgba(82,183,136,0.18); color: var(--green-light); }
-  .card h2 { color: white; font-size: 1.3rem; margin-bottom: 0.5rem; }
-  .card p { color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.6; }
-  .card .badge-coming {
-    position: absolute; top: 14px; right: -22px;
-    background: rgba(82,183,136,0.25); color: var(--green-light);
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
-    padding: 0.2rem 2rem; transform: rotate(45deg);
-    text-transform: uppercase;
-  }
-
-  footer { color: rgba(255,255,255,0.3); font-size: 0.75rem; margin-top: 3rem; }
-  footer a { color: rgba(201,168,76,0.6); }
+:root{--navy:#0d1b3e;--gold:#c9a84c;--gold2:#e8c96b;--green:#52b788;--blue:#8ec5ff}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 50% 0,rgba(201,168,76,.14),transparent 35rem),var(--navy);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1rem;text-align:center;color:white}.icon{font-size:4rem;animation:float 3s ease-in-out infinite;display:block;margin-bottom:1rem}@keyframes float{50%{transform:translateY(-10px)}}h1{color:var(--gold2);font-size:clamp(1.8rem,5vw,3rem);margin-bottom:.5rem}.subtitle{color:rgba(255,255,255,.66);font-size:1rem;margin-bottom:3rem;font-style:italic}.cards{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;max-width:980px}.card{background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:2rem 1.8rem;width:290px;min-height:245px;text-decoration:none;transition:.25s;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(201,168,76,.08),transparent 70%);pointer-events:none}.card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 40px rgba(201,168,76,.15)}.manus{border-color:rgba(82,183,136,.3)}.manus:before{background:radial-gradient(circle at 50% 0,rgba(82,183,136,.08),transparent 70%)}.manus:hover{border-color:var(--green);box-shadow:0 12px 40px rgba(82,183,136,.15)}.chatgpt{border-color:rgba(142,197,255,.34)}.chatgpt:before{background:radial-gradient(circle at 50% 0,rgba(142,197,255,.1),transparent 70%)}.chatgpt:hover{border-color:var(--blue);box-shadow:0 12px 40px rgba(142,197,255,.16)}.card-icon{font-size:2.5rem;margin-bottom:1rem;display:block}.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;padding:.2rem .7rem;border-radius:20px;margin-bottom:.8rem;background:rgba(201,168,76,.18);color:var(--gold2);text-transform:uppercase}.manus .tag{background:rgba(82,183,136,.18);color:var(--green)}.chatgpt .tag{background:rgba(142,197,255,.16);color:var(--blue)}.card h2{font-size:1.3rem;margin-bottom:.5rem}.card p{color:rgba(255,255,255,.64);font-size:.9rem;line-height:1.6}footer{color:rgba(255,255,255,.36);font-size:.78rem;margin-top:3rem}footer a{color:rgba(201,168,76,.72)}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <span class="icon">🌙</span>
-  <h1>Сура Аль-Мульк</h1>
-  <p class="subtitle">Система запоминания · Выберите версию</p>
-
-  <div class="cards">
-    <!-- Claude version -->
-    <a href="./claude/" class="card">
-      <span class="card-icon">🤖</span>
-      <span class="card-tag">Claude · Anthropic</span>
-      <h2>Версия Claude</h2>
-      <p>Интерактивный трекер прогресса, мнемоники, тесты активного вспоминания, режим запоминания.</p>
-    </a>
-
-    <!-- Manus version -->
-    <a href="./manus/" class="card manus">
-      <span class="card-icon">✨</span>
-      <span class="card-tag">Manus · AI</span>
-      <h2>Версия Manus</h2>
-      <p>Вторая интерпретация сайта, созданная агентом Manus: 30 аятов в 10 учебных блоках.</p>
-    </a>
-  </div>
-
-  <footer>
-    <a href="https://github.com/HalimHamidov/surat-almulk" target="_blank">GitHub ↗</a> ·
-    Тексты: <a href="https://quran.com/67" target="_blank">Quran.com</a> ·
-    <a href="https://umma.ru" target="_blank">Umma.ru</a>
-  </footer>
+<span class="icon">🌙</span>
+<h1>Сура Аль-Мульк</h1>
+<p class="subtitle">Система запоминания · выберите версию</p>
+<div class="cards">
+  <a href="./claude/" class="card">
+    <span class="card-icon">🤖</span><span class="tag">Claude · Anthropic</span>
+    <h2>Версия Claude</h2>
+    <p>Интерактивный трекер прогресса, мнемоники, тесты активного вспоминания и режим запоминания.</p>
+  </a>
+  <a href="./manus/" class="card manus">
+    <span class="card-icon">✨</span><span class="tag">Manus · AI</span>
+    <h2>Версия Manus</h2>
+    <p>Вторая интерпретация сайта: 30 аятов в 10 учебных блоках с отдельной визуальной системой.</p>
+  </a>
+  <a href="./chatgpt/" class="card chatgpt">
+    <span class="card-icon">◎</span><span class="tag">ChatGPT · OpenAI</span>
+    <h2>Версия ChatGPT</h2>
+    <p>Мобильная single-page версия с блоком дня, localStorage-прогрессом, режимами чтения и ссылкой на Umma.ru.</p>
+  </a>
+</div>
+<footer>
+  <a href="https://github.com/HalimHamidov/surat-almulk" target="_blank" rel="noreferrer">GitHub ↗</a> ·
+  Арабский текст: <a href="https://quran.com/67" target="_blank" rel="noreferrer">Quran.com</a> ·
+  Русские объяснения: <a href="https://umma.ru/sura-67-al-mulk-vlast" target="_blank" rel="noreferrer">Umma.ru</a>
+</footer>
 </body>
 </html>
