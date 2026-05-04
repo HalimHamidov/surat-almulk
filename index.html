@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌙 Сура Аль-Мульк — Выберите версию</title>
+<style>
+  :root {
+    --navy: #0d1b3e;
+    --gold: #c9a84c;
+    --gold-light: #e8c96b;
+    --cream: #faf6ed;
+    --green: #2d6a4f;
+    --green-light: #52b788;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .icon { font-size: 4rem; animation: float 3s ease-in-out infinite; display: block; margin-bottom: 1rem; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  h1 { color: var(--gold-light); font-size: clamp(1.6rem, 5vw, 2.8rem); margin-bottom: 0.5rem; }
+  .subtitle { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 3rem; font-style: italic; }
+
+  .cards { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; max-width: 680px; }
+
+  .card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 20px;
+    padding: 2rem 1.8rem;
+    width: 280px;
+    text-decoration: none;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(201,168,76,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  .card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 40px rgba(201,168,76,0.15); }
+  .card.manus { border-color: rgba(82,183,136,0.3); }
+  .card.manus::before { background: radial-gradient(circle at 50% 0%, rgba(82,183,136,0.08), transparent 70%); }
+  .card.manus:hover { border-color: var(--green-light); box-shadow: 0 12px 40px rgba(82,183,136,0.15); }
+
+  .card-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  .card-tag {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    padding: 0.2rem 0.7rem; border-radius: 20px;
+    margin-bottom: 0.8rem;
+    background: rgba(201,168,76,0.18); color: var(--gold-light);
+    text-transform: uppercase;
+  }
+  .card.manus .card-tag { background: rgba(82,183,136,0.18); color: var(--green-light); }
+  .card h2 { color: white; font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .card p { color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.6; }
+  .card .badge-coming {
+    position: absolute; top: 14px; right: -22px;
+    background: rgba(82,183,136,0.25); color: var(--green-light);
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+    padding: 0.2rem 2rem; transform: rotate(45deg);
+    text-transform: uppercase;
+  }
+
+  footer { color: rgba(255,255,255,0.3); font-size: 0.75rem; margin-top: 3rem; }
+  footer a { color: rgba(201,168,76,0.6); }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <span class="icon">🌙</span>
+  <h1>Сура Аль-Мульк</h1>
+  <p class="subtitle">Система запоминания · Выберите версию</p>
+
+  <div class="cards">
+    <!-- Claude version -->
+    <a href="./claude/" class="card">
+      <span class="card-icon">🤖</span>
+      <span class="card-tag">Claude · Anthropic</span>
+      <h2>Версия Claude</h2>
+      <p>Интерактивный трекер прогресса, мнемоники, тесты активного вспоминания, режим запоминания.</p>
+    </a>
+
+    <!-- Manus version (coming soon) -->
+    <a href="./manus/" class="card manus">
+      <span class="badge-coming">Soon</span>
+      <span class="card-icon">✨</span>
+      <span class="card-tag">Manus · AI</span>
+      <h2>Версия Manus</h2>
+      <p>Скоро. Вторая интерпретация сайта, созданная агентом Manus.</p>
+    </a>
+  </div>
+
+  <footer>
+    <a href="https://github.com/HalimHamidov/surat-almulk" target="_blank">GitHub ↗</a> ·
+    Тексты: <a href="https://quran.com/67" target="_blank">Quran.com</a> ·
+    <a href="https://umma.ru" target="_blank">Umma.ru</a>
+  </footer>
+</body>
+</html>
