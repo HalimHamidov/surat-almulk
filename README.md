@@ -30,6 +30,10 @@ surat-almulk/
 2. Source: `Deploy from a branch`, branch `main`, folder `/ (root)`.
 3. Save. GitHub Pages serves all subfolders automatically.
 
+## Offline Use
+
+The landing page registers a service worker and web app manifest. After the site is opened once over `https://` or `localhost`, browsers can cache the landing page and version pages for offline use. On mobile, use the browser menu's install/Add to Home Screen action to save it like an app.
+
 ## Sources
 
 - Arabic text: [Quran.com/67](https://quran.com/67)
